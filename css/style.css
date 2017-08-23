@@ -1,0 +1,68 @@
+body{
+  min-height: 100%;
+  margin: 0;
+  background: #333333;
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.container{
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+
+.board{
+  width: 100%;
+  height: 100%;
+  border-spacing: 0;
+}
+
+.board td{
+  background: #ffffff;
+}
+
+.board tr:nth-child(odd) td:nth-child(even),
+.board tr:nth-child(even) td:nth-child(odd){
+  background: #666666;
+}
+
+.checkers{
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 37.5%;
+}
+.checkers--top{
+  top: 0;
+}
+.checkers--bottom{
+  bottom: 0;
+}
+.checkers--float .checker{
+  position: relative;
+  width: 12.5%;
+  padding-bottom: 12.5%;
+  float: left;
+  margin-left: 12.5%;
+}
+.checkers--float .checker:before{
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  display: block;
+  width: 80%;
+  height: 80%;
+  background: #000000;
+  border-radius: 50%;
+}
+.checkers--float .checker:nth-child(5){
+  margin-left: 0;
+}
